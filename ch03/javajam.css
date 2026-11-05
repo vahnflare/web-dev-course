@@ -4,6 +4,13 @@ body {
     font-family: Tahoma, Arial, sans-serif;
 }
 
+#wrapper {
+    width: 80%;
+    background-color: #FEFAEB;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 header {
     color: #8C3826;
     background-color: #D2B48C;
