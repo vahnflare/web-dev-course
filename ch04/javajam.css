@@ -1,6 +1,6 @@
 body {
     background-color: #FCEBB6;
-    background-image: url("CH04Screenshot/fadedroad50.jpg");
+    background-image: url("images/fadedroad50.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -77,7 +77,7 @@ img {
 
 #homehero {
     height: 300px;
-    background-image: url("CH04Screenshot/hero.jpg");
+    background-image: url("images/hero.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
