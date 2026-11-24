@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #D2B48C;
+    color: #221811;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+#wrapper {
+    background-color: #231814;
+}
+
+header {
+    height: 128px;
+    padding: 5px 1em 5px 105px;
+    background: #D2B48C url("images/cup.jpg") no-repeat;
+    color: #231814;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:link,
+header a:visited {
+    color: #231814;
+}
+
+header a:hover {
+    color: #FEF6C2;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2,
+h3,
+dt {
+    color: #8C3826;
+}
+
+h4 {
+    padding-bottom: 0;
+    border-bottom: 1px solid #231814;
+    background-color: #D2B48C;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+/* Small screens use a vertical navigation list. */
+nav {
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.25em;
+}
+
+nav li {
+    width: 100%;
+    padding: 0.5em 1em;
+    border-bottom: 1px solid #FEF6C2;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+}
+
+nav a:link {
+    color: #FEF6C2;
+}
+
+nav a:visited {
+    color: #D2B48C;
+}
+
+nav a:hover {
+    color: #CC9933;
+}
+
+main {
+    display: flow-root;
+    padding: 0 0 2em;
+    background-color: #FEF6C2;
+}
+
+main h2,
+main h3,
+main h4,
+main p,
+main div,
+main ul,
+main dl {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+main ul {
+    padding-left: 2em;
+}
+
+#homehero,
+#heromugs,
+#heroguitar {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#homehero {
+    background-image: url("images/road.jpg");
+}
+
+#heromugs {
+    background-image: url("images/threemugs.jpg");
+}
+
+#heroguitar {
+    background-image: url("images/guitar.jpg");
+}
+
+/* Give each Menu section one layer of padding. */
+main #flow {
+    padding-inline: 0;
+}
+
+#flow section {
+    padding-inline: 1em;
+}
+
+#flow section h3,
+#flow section p {
+    padding-inline: 0;
+}
+
+main .details {
+    padding-inline: 10%;
+}
+
+.details a {
+    text-decoration: none;
+}
+
+.details img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#mobile {
+    display: inline;
+}
+
+#desktop {
+    display: none;
+}
+
+#jobs-content {
+    min-height: 220px;
+}
+
+footer {
+    padding: 1em;
+    border-top: 2px solid #8C3826;
+    background-color: #D2B48C;
+    font-size: 0.60em;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Medium screens use horizontal navigation and wider hero images. */
+@media (min-width: 600px) {
+    header {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    nav li {
+        width: auto;
+        border-bottom: none;
+    }
+
+    #homehero {
+        height: 50vh;
+        background-image: url("images/hero.jpg");
+    }
+
+    #heromugs {
+        background-image: url("images/heromugs.jpg");
+    }
+
+    #heroguitar {
+        background-image: url("images/heroguitar.jpg");
+    }
+
+    #flow {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #flow section {
+        flex: 1;
+        min-width: 0;
+    }
+
+    #mobile {
+        display: none;
+    }
+
+    #desktop {
+        display: inline;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1em;
+    }
+
+    .details a {
+        flex-shrink: 0;
+    }
+
+    main .details p {
+        margin: 0;
+        padding: 0;
+    }
+
+    h4 {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+/* Large screens place navigation beside the main content. */
+@media (min-width: 1024px) {
+    @supports (display: grid) {
+        #wrapper {
+            display: grid;
+            grid-template:
+                "header header"
+                "nav    main"
+                "footer footer"
+                / 200px minmax(0, 1fr);
+        }
+
+        header {
+            grid-area: header;
+            background-image: url("images/coffeelogo.jpg");
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        nav ul {
+            flex-direction: column;
+        }
+
+        nav li {
+            width: 100%;
+        }
+    }
+}
