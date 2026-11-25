@@ -129,6 +129,7 @@ main ul {
     background-image: url("images/guitar.jpg");
 }
 
+/* Chapter 9 Jobs banner on narrow screens. */
 #herojobs {
     height: 300px;
     background-image: url("images/coffeecup.jpg");
@@ -184,6 +185,7 @@ footer {
     text-align: center;
 }
 
+/* Chapter 8 Menu table. */
 table {
     width: 90%;
     margin: auto;
@@ -199,7 +201,7 @@ tr:nth-of-type(odd) {
     background-color: #D2B48C;
 }
 
-/* Stack the form labels and controls on narrow screens. */
+/* Chapter 9 single-column form on narrow screens. */
 form {
     display: flex;
     flex-direction: column;
@@ -212,6 +214,7 @@ textarea {
     margin-bottom: 0.5em;
 }
 
+/* Medium screens use horizontal navigation and wider hero images. */
 @media (min-width: 600px) {
     header {
         padding-left: 0;
@@ -290,10 +293,10 @@ textarea {
         margin-right: 10%;
     }
 
-    /* Place the labels beside their controls on wider screens. */
+    /* Chapter 9 two-column form with labels on the left. */
     form {
-        width: 40%;
         display: grid;
+        width: 40%;
         gap: 1em;
         grid-template-columns: 6em 1fr;
     }
@@ -304,6 +307,7 @@ textarea {
     }
 }
 
+/* Large screens place navigation beside the main content. */
 @media (min-width: 1024px) {
     @supports (display: grid) {
         #wrapper {
